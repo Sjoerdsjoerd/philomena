@@ -81,7 +81,7 @@ Uncomment the entrypoint line in `docker-compose.yml`. Run `docker-compose up`. 
 # PGPASSWORD=$POSTGRES_PASSWORD dropdb -h $POSTGRES_HOST -U $POSTGRES_USER $POSTGRES_DB
 PGPASSWORD=$POSTGRES_PASSWORD createdb -h $POSTGRES_HOST -U $POSTGRES_USER $POSTGRES_DB
 mix ecto.setup
-mix reindex_all
+mix reindex_all --i-know-what-im-doing
 mix ecto.migrate
 exit
 docker-compose down
